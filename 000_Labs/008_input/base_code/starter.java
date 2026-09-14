@@ -13,22 +13,33 @@ class starter {
 	    
 		
 		System.out.println("What is your first name");
+		String name = sc.nextLine();
+
 		
-		String age = sc.nextLine();
 		System.out.println("What is your age");
+		int age = sc.nextInt();
 		
-		String month = sc.nextLine();
+		
 		System.out.println("What month were you born? (1-12)");
-		
-        String day = sc.nextLine();
-		System.out.println("What day were you born? (1-31)");
+		int month = sc.nextInt();
+
         
+		System.out.println("What day were you born? (1-31)");
+        int day = sc.nextInt();
 
-		String year = sc.nextLine();
+		
 		System.out.println("What year were you born? (1-12)");
-
-		String buckfity = sc.nextLine();
+		int year = sc.nextInt();
+		
+		
 		System.out.println("How much is a buck fifty? (0.0)");
+		double buckfity = sc.nextDouble();
 
-	}
+		System.out.println("Your name is " + name + " and you were born on " + month + "/" + day + "/" + year);
+		System.out.println("You are " + age + "years old!!");
+		System.out.println("you have $" + buckfity + " in your wallet.");
+		int MyNumber = 5;
+		
+
+}
 }
