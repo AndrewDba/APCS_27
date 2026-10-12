@@ -3,7 +3,7 @@
  *  Date: 
 */
 
-import java.util.Scanner;
+import java.util.Scanner;int between110 = (int) (Math.random() * 10 + 1);
 import java.util.Random;
 
 class starter {
@@ -13,7 +13,7 @@ class starter {
 		int between09 = (int) (Math.random() * 9);
 		System.out.println("A number between 0 - 9: " + between09); 
 	
-		int between110 = (int) (Math.random() * 10 + 1);
+		
 		System.out.println("A number between 1 - 10: " + between110);
 	
 		double between2535 = (double) (Math.random() * 1 + 2.5);
