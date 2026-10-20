@@ -16,8 +16,10 @@ class starter {
 		System.out.println("Please enter how many times you'd like to print your name: ");
 		int amount = sc.nextInt();
 
-		for (int i = 0; i < amount; i = i + 1){
+		int egg = 0;
+		while (egg < amount){
 			System.out.println(name);
+			egg = egg + 1;
 		}
 
 

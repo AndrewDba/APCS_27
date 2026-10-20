@@ -2,7 +2,7 @@
  *	Author:  
  *  Date: 
 */
-
+import java.util.Scanner;
 import java.io.*;
 import java.util.*;
 import java.time.*;
@@ -14,7 +14,75 @@ class starter {
 
 	public static void main(String args[]) throws InterruptedException {
 		// Write your code here!
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Welcome to Type Quest!");
+		System.out.println("It is currently " + getTime() + " PM and we're ready to play!");
+		System.out.println("Given a sentence, type it as fast as possible!");
+		System.out.println("");
+		System.out.println("--------------------------------------------");
+		System.out.println("Woud you like to:");
+		System.out.println("1 - Play random");
+		System.out.println("2 - Play set");
+		System.out.println("3 - Quit");
+		int options3 = sc.nextInt();
+		
 
+		
+			if (options3 == 1) {
+			System.out.println("Youve chosen to randomly select a sentence.");
+			System.out.println("-------------Your sentence is:------------");
+			String sentence = getSentence();
+			System.out.println(sentence);
+			System.out.println("------------------------------------------");
+			countdown();
+			sc.nextLine();
+
+			startTimer();
+			String answerToSentence = sc.nextLine();
+			double timeElapsed = endTimer();
+			int errors = compareSentences(sentence, answerToSentence);
+			int totalLetters = sentence.length();
+			int totalWords = wordsInSentence(sentence);
+
+			double lettersPerMinute = (totalLetters / timeElapsed) * 60;
+			double wordsPerMinute = (totalWords / timeElapsed) * 60;
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: " +timeElapsed);
+			System.out.println("Errors: " + errors + " / " + totalLetters + "letters");
+			System.out.println(lettersPerMinute + " letters per minute");
+			System.out.println("-------------------------------------------------------");
+		} else if (options3 == 2) {
+			
+			System.out.println("-------------Your sentence is:------------");
+			String sentence2 = getSentence();
+			System.out.println(sentence2);
+			System.out.println("------------------------------------------");
+			countdown();
+			sc.nextLine();
+
+			startTimer();
+			String answerToSentence2 = sc.nextLine();
+
+			double timeElapsed2 = endTimer();
+
+			int errors2 = compareSentences(sentence2, answerToSentence2);
+			int totalLetters2 = sentence2.length();
+			int totalWords2 = wordsInSentence(sentence2);
+
+			double lettersPerMinute2 = (totalLetters2 / timeElapsed2) * 60;
+			double wordsPerMinute2 = (totalWords2 / timeElapsed2) * 60;
+
+			System.out.println("Nice job! Here is your result!");
+			System.out.println("Time: " + timeElapsed2);
+			System.out.println("Errors: " + errors2 + " / " + totalLetters2 + "letters");
+			System.out.println(lettersPerMinute2 + " letters per minute");
+			System.out.println("-------------------------------------------------------");
+			
+		}
+
+		
+		
 		
 	}
 
