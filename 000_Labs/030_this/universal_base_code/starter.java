@@ -26,5 +26,9 @@ class starter {
 		// Your code goes below here
 		PooleDwarf test = new PooleDwarf();
 		
-	}
+		
+
+
+
+	}		
 }
